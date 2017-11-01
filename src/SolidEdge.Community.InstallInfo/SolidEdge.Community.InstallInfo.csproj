@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>NET40;NET45</TargetFrameworks>
+    <AssemblyName>SolidEdge.Community.InstallInfo</AssemblyName>
+    <RootNamespace>SolidEdgeCommunity.InstallInfo</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|NET40|AnyCPU'">
+    <DocumentationFile>bin\Release\net40\SolidEdge.Community.InstallInfo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|NET45|AnyCPU'">
+    <DocumentationFile>bin\Release\net45\SolidEdge.Community.InstallInfo.xml</DocumentationFile>
+  </PropertyGroup>
+</Project>
