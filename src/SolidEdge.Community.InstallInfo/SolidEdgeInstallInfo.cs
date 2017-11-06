@@ -38,7 +38,12 @@ namespace SolidEdgeCommunity.InstallInfo
                 all.AddRange(ProcessLocalMachine(RegistryView.Registry32));
             }
 
-            All = all.ToArray();
+            // Remove duplicates. For example, ST8 x64 writes to
+            // HKEY_LOCAL_MACHINE\SOFTWARE\Unigraphics Solutions\Solid Edge\Version 108
+            // and
+            // HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Unigraphics Solutions\Solid Edge\Version 108.
+            All = all.GroupBy(x => x.Version).Select(x => x.First()).ToArray();
+
             Default = All.FirstOrDefault(x => x.IsDefault);
         }
 
@@ -72,6 +77,7 @@ namespace SolidEdgeCommunity.InstallInfo
                                             Owner = $"{currentVersionKey.GetValue("Owner")}",
                                             PreferencesPath = $"{currentVersionKey.GetValue("PreferencesPath")}",
                                             ProductCode = $"{currentVersionKey.GetValue("ProductCode")}",
+                                            RegistryPath = $"{versionKey.Name}",
                                             VersionString = $"{currentVersionKey.GetValue("Build")}"
                                         };
 
@@ -197,6 +203,11 @@ namespace SolidEdgeCommunity.InstallInfo
         /// Returns the value of the ProduceCode registry value.
         /// </summary>
         public string ProductCode { get; private set; }
+        
+        /// <summary>
+        /// Returns the full registry path of the component.
+        /// </summary>
+        public string RegistryPath { get; private set; }
 
         /// <summary>
         /// Returns a Version object representing the version of Solid Edge.
