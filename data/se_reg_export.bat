@@ -1,0 +1,1 @@
+REG EXPORT "HKLM\SOFTWARE\Unigraphics Solutions" HKLM~SOFTWARE~UGS.reg
