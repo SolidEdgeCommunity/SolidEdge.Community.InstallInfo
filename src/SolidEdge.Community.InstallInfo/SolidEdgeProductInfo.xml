@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SolidEdge>
+  <ProductInfo>
+    <ProductName>Solid Edge ST</ProductName>
+    <Version>100.0</Version>
+    <ParasolidVersion>19.1</ParasolidVersion>
+    <ProductCode>d7bcf606-5821-4d1d-889e-76ae9d00e439</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST</ProductName>
+    <Version>100.0</Version>
+    <ParasolidVersion>19.1</ParasolidVersion>
+    <ProductCode>009d7870-4aa2-4852-bd59-bf17fe365137</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST2</ProductName>
+    <Version>102.0</Version>
+    <ParasolidVersion>22.0</ParasolidVersion>
+    <ProductCode>cc185d10-5c0e-40c3-91f2-63314bb365af</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST2</ProductName>
+    <Version>102.0</Version>
+    <ParasolidVersion>22.0</ParasolidVersion>
+    <ProductCode>35a5b689-907e-4052-9855-a7a083b233e9</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST3</ProductName>
+    <Version>103.0</Version>
+    <ParasolidVersion>23.0</ParasolidVersion>
+    <ProductCode>66ed11b7-4988-47fa-be42-45a3af0415bc</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST3</ProductName>
+    <Version>103.0</Version>
+    <ParasolidVersion>23.0</ParasolidVersion>
+    <ProductCode>ea8b28a2-d84f-447e-b588-9c255f1edc0a</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST4</ProductName>
+    <Version>104.0</Version>
+    <ParasolidVersion>24.0</ParasolidVersion>
+    <ProductCode>6baddd61-4b40-4fd1-bae8-0e8c1e85f806</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST4</ProductName>
+    <Version>104.0</Version>
+    <ParasolidVersion>24.0</ParasolidVersion>
+    <ProductCode>de02b016-e096-437f-8d96-853bb36011d5</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST5</ProductName>
+    <Version>105.0</Version>
+    <ParasolidVersion>25.0</ParasolidVersion>
+    <ProductCode>64e87e22-a6e5-4ea4-a14f-089ba2470d1d</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST5</ProductName>
+    <Version>105.0</Version>
+    <ParasolidVersion>25.0</ParasolidVersion>
+    <ProductCode>6350353b-be44-4e86-9b3f-ce2c77bdfaec</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST6</ProductName>
+    <Version>106.0</Version>
+    <ParasolidVersion>26.0</ParasolidVersion>
+    <ProductCode>e7aa3093-4539-45ab-9bfc-7fd7d2d174fb</ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST6</ProductName>
+    <Version>106.0</Version>
+    <ParasolidVersion>26.0</ParasolidVersion>
+    <ProductCode>132b6abb-431a-4dda-8861-914ab7b0325a</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST7</ProductName>
+    <Version>107.0</Version>
+    <ParasolidVersion>27.0</ParasolidVersion>
+    <ProductCode>ab0f3228-d90c-4574-8a28-589483a68c93</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST8</ProductName>
+    <Version>108.0</Version>
+    <ParasolidVersion>28.0</ParasolidVersion>
+    <ProductCode>c69f7b10-60f2-476c-b0c1-4d61628462b7</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST9</ProductName>
+    <Version>109.0</Version>
+    <ParasolidVersion>29.0</ParasolidVersion>
+    <ProductCode>1e02e133-6790-460a-b9c7-9cea71cb502a</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge ST10</ProductName>
+    <Version>110.0</Version>
+    <ParasolidVersion>30.0</ParasolidVersion>
+    <ProductCode>3d4c868f-5ccd-49f9-820c-da31d714abf6</ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+</SolidEdge>

@@ -28,6 +28,8 @@ namespace SolidEdgeCommunity.InstallInfo
 
             var all = new List<SolidEdgeInstallInfo>();
 
+            ProcessDefaultEdgeExePath();
+
             if (Environment.Is64BitOperatingSystem)
             {
                 all.AddRange(ProcessLocalMachine(RegistryView.Registry64));
@@ -44,7 +46,39 @@ namespace SolidEdgeCommunity.InstallInfo
             // HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Unigraphics Solutions\Solid Edge\Version 108.
             All = all.GroupBy(x => x.Version).Select(x => x.First()).ToArray();
 
+            if (String.IsNullOrWhiteSpace(DefaultEdgeExePath) == false)
+            {
+                var defaultEdgePath = Path.GetDirectoryName(DefaultEdgeExePath);
+                var defaultInstallInfo = All.FirstOrDefault(x => String.Equals(x.InstallPath, defaultEdgePath, StringComparison.OrdinalIgnoreCase));
+                defaultInstallInfo.IsDefault = true;
+            }
+
             Default = All.FirstOrDefault(x => x.IsDefault);
+        }
+
+        static void ProcessDefaultEdgeExePath()
+        {
+            DefaultEdgeExePath = null;
+
+            using (var classesRootKey = RegistryKey.OpenBaseKey(RegistryHive.ClassesRoot, RegistryView.Default))
+            {
+                var solidEdgeCATID = new Guid(CLSID.SolidEdge);
+                var subKeyName = String.Join(@"\", "CLSID", solidEdgeCATID.ToStringEnclosedWithBraces(), "LocalServer32");
+
+                using (var localServerKey = classesRootKey.OpenSubKey(subKeyName, false))
+                {
+                    var edgeExe = "edge.exe";
+                    var edgeExePath = $"{localServerKey.GetValue(null)}";
+                    var index = edgeExePath.IndexOf(edgeExe, StringComparison.OrdinalIgnoreCase);
+
+                    if (index > 0)
+                    {
+                        index += edgeExe.Length;
+                        var edgeExeFileInfo = new FileInfo(edgeExePath.Substring(0, index));
+                        DefaultEdgeExePath = edgeExeFileInfo.FullName;
+                    }
+                }
+            }
         }
 
         static IEnumerable<SolidEdgeInstallInfo> ProcessLocalMachine(RegistryView registryView)
@@ -76,7 +110,6 @@ namespace SolidEdgeCommunity.InstallInfo
                                             InstallPath = $"{currentVersionKey.GetValue("InstallPath")}",
                                             Owner = $"{currentVersionKey.GetValue("Owner")}",
                                             PreferencesPath = $"{currentVersionKey.GetValue("PreferencesPath")}",
-                                            ProductCode = $"{currentVersionKey.GetValue("ProductCode")}",
                                             RegistryPath = $"{versionKey.Name}",
                                             VersionString = $"{currentVersionKey.GetValue("Build")}"
                                         };
@@ -105,7 +138,7 @@ namespace SolidEdgeCommunity.InstallInfo
             return list;
         }
 
-        private static Version ParseVersionFromBuildString(string build)
+        static Version ParseVersionFromBuildString(string build)
         {
             var buildTokens = build.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -138,6 +171,8 @@ namespace SolidEdgeCommunity.InstallInfo
         /// Returns information about the all Solid Edge installs.
         /// </summary>
         public static SolidEdgeInstallInfo[] All { get; private set; }
+
+        public static string DefaultEdgeExePath { get; private set; }
 
         /// <summary>
         /// Returns the value of the BaseProduct registry value.
@@ -199,11 +234,6 @@ namespace SolidEdgeCommunity.InstallInfo
         /// </summary>
         public string PreferencesPath { get; private set; }
 
-        /// <summary>
-        /// Returns the value of the ProduceCode registry value.
-        /// </summary>
-        public string ProductCode { get; private set; }
-        
         /// <summary>
         /// Returns the full registry path of the component.
         /// </summary>

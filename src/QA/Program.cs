@@ -1,4 +1,5 @@
-﻿using SolidEdgeCommunity.InstallInfo;
+﻿using Microsoft.Win32;
+using SolidEdgeCommunity.InstallInfo;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,19 +12,26 @@ namespace QA
     {
         static void Main(string[] args)
         {
-            //System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture
-            
-            var os = Environment.OSVersion;
-            TestProductCodesFromMsi();
 
+            //TestProductCodesFromMsi();
+
+            TestProductInfo();
             TestInstallInfo();
             TestAddIns();
-            TestProductInfo();
-            
+        }
+
+        static void TestProductInfo()
+        {
+            var allKnown = SolidEdgeProductInfo.AllInstalled;
+
+            foreach (var productInfo in allKnown)
+            {
+            }
         }
 
         static void TestInstallInfo()
         {
+            SolidEdgeInstallInfo.Refresh();
             var all = SolidEdgeInstallInfo.All;
             var installInfo = SolidEdgeInstallInfo.Default;
         }
@@ -37,15 +45,6 @@ namespace QA
                 foreach (var environmentCategory in addin.EnvironmentCategories)
                 {
                 }
-            }
-        }
-
-        static void TestProductInfo()
-        {
-            var allKnown = SolidEdgeProductInfo.AllKnown;
-
-            foreach (var productInfo in allKnown)
-            {
             }
         }
 
@@ -102,6 +101,7 @@ namespace QA
         {
             var type = Type.GetTypeFromProgID("WindowsInstaller.Installer");
             var installer = (WindowsInstaller.Installer)Activator.CreateInstance(type);
+
             var database = installer.OpenDatabase(msiPath, 0);
 
             var view = database.OpenView("SELECT * FROM Property");

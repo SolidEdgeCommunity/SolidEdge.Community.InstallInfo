@@ -7,6 +7,11 @@ using System.Text;
 
 namespace SolidEdgeCommunity.InstallInfo
 {
+    internal static class CLSID
+    {
+        public const string SolidEdge = "DED89DB0-45B6-11CE-B307-0800363A1E02";
+    }
+
     internal static class CATID
     {
         public const string ManagedComponent = "62C8FE65-4EBB-45E7-B440-6E39B2CDBF29";

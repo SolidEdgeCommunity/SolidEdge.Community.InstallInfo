@@ -13,4 +13,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|NET45|AnyCPU'">
     <DocumentationFile>bin\Release\net45\SolidEdge.Community.InstallInfo.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SolidEdgeProductInfo.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SolidEdgeProductInfo.xml" />
+  </ItemGroup>
 </Project>
