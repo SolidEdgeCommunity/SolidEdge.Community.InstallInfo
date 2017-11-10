@@ -16,40 +16,6 @@ namespace SolidEdgeCommunity.InstallInfo
         static SolidEdgeProductInfo()
         {
             Refresh();
-            //AllKnown = new SolidEdgeProductInfo[]
-            //    {
-            //        //new SolidEdgeProductInfo("Solid Edge V6", new Version(6, 0), new Version(10, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V7", new Version(7, 0), new Version(11, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V8", new Version(8, 0), new Version(11, 1), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V9", new Version(9, 0), new Version(12, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V10", new Version(10, 0), new Version(13, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V11", new Version(11, 0), new Version(13, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V12", new Version(12, 0), new Version(14, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V14", new Version(14, 0), new Version(14, 1), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V15", new Version(15, 0), new Version(15, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V16", new Version(16, 0), new Version(16, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V17", new Version(17, 0), new Version(16, 1), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V18", new Version(18, 0), new Version(17, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V19", new Version(19, 0), new Version(18, 0), new Guid()),
-            //        //new SolidEdgeProductInfo("Solid Edge V20", new Version(20, 0), new Version(18, 1), new Guid()),
-
-            //        new SolidEdgeProductInfo("Solid Edge ST", new Version(100, 0), new Version(19, 1), new Guid("{D7BCF606-5821-4D1D-889E-76AE9D00E439}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST", new Version(100, 0), new Version(19, 1), new Guid("{009D7870-4AA2-4852-BD59-BF17FE365137}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST2", new Version(102, 0), new Version(22, 0), new Guid("{CC185D10-5C0E-40C3-91F2-63314BB365AF}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST2", new Version(102, 0), new Version(22, 0), new Guid("{35A5B689-907E-4052-9855-A7A083B233E9}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST3", new Version(103, 0), new Version(23, 0), new Guid("{66ED11B7-4988-47FA-BE42-45A3AF0415BC}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST3", new Version(103, 0), new Version(23, 0), new Guid("{EA8B28A2-D84F-447E-B588-9C255F1EDC0A}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST4", new Version(104, 0), new Version(24, 0), new Guid("{6BADDD61-4B40-4FD1-BAE8-0E8C1E85F806}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST4", new Version(104, 0), new Version(24, 0), new Guid("{DE02B016-E096-437F-8D96-853BB36011D5}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST5", new Version(105, 0), new Version(25, 0), new Guid("{64E87E22-A6E5-4EA4-A14F-089BA2470D1D}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST5", new Version(105, 0), new Version(25, 0), new Guid("{6350353B-BE44-4E86-9B3F-CE2C77BDFAEC}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST6", new Version(106, 0), new Version(26, 0), new Guid("{E7AA3093-4539-45AB-9BFC-7FD7D2D174FB}"), "x86"),
-            //        new SolidEdgeProductInfo("Solid Edge ST6", new Version(106, 0), new Version(26, 0), new Guid("{132B6ABB-431A-4DDA-8861-914AB7B0325A}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST7", new Version(107, 0), new Version(27, 0), new Guid("{AB0F3228-D90C-4574-8A28-589483A68C93}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST8", new Version(108, 0), new Version(28, 0), new Guid("{C69F7B10-60F2-476C-B0C1-4D61628462B7}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST9", new Version(109, 0), new Version(29, 0), new Guid("{1E02E133-6790-460A-B9C7-9CEA71CB502A}"), "x64"),
-            //        new SolidEdgeProductInfo("Solid Edge ST10", new Version(110, 0), new Version(30, 0), new Guid("{3D4C868F-5CCD-49F9-820C-DA31D714ABF6}"), "x64")
-            //    };
         }
 
         private SolidEdgeProductInfo()
@@ -148,6 +114,9 @@ namespace SolidEdgeCommunity.InstallInfo
         /// </summary>
         public string Platform { get; private set; }
 
+        /// <summary>
+        /// Returns the installation information associated with this product.
+        /// </summary>
         public SolidEdgeInstallInfo InstallInfo
         {
             get
@@ -156,6 +125,9 @@ namespace SolidEdgeCommunity.InstallInfo
             }
         }
 
+        /// <summary>
+        /// Determines if this product is the default installation.
+        /// </summary>
         public bool IsDefault
         {
             get

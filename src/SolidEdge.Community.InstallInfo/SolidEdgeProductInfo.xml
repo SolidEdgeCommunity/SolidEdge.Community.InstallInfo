@@ -1,6 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SolidEdge>
   <ProductInfo>
+    <ProductName>Solid Edge V6</ProductName>
+    <Version>6.0</Version>
+    <ParasolidVersion>10.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V7</ProductName>
+    <Version>7.0</Version>
+    <ParasolidVersion>11.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V8</ProductName>
+    <Version>8.0</Version>
+    <ParasolidVersion>11.1</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V9</ProductName>
+    <Version>9.0</Version>
+    <ParasolidVersion>12.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V10</ProductName>
+    <Version>10.0</Version>
+    <ParasolidVersion>13.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V11</ProductName>
+    <Version>11.0</Version>
+    <ParasolidVersion>13.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V12</ProductName>
+    <Version>12.0</Version>
+    <ParasolidVersion>14.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V14</ProductName>
+    <Version>14.0</Version>
+    <ParasolidVersion>14.1</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V15</ProductName>
+    <Version>15.0</Version>
+    <ParasolidVersion>15.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V16</ProductName>
+    <Version>16.0</Version>
+    <ParasolidVersion>16.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V17</ProductName>
+    <Version>17.0</Version>
+    <ParasolidVersion>16.1</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V18</ProductName>
+    <Version>18.0</Version>
+    <ParasolidVersion>17.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V19</ProductName>
+    <Version>19.0</Version>
+    <ParasolidVersion>18.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V19</ProductName>
+    <Version>19.0</Version>
+    <ParasolidVersion>18.0</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V20</ProductName>
+    <Version>20.0</Version>
+    <ParasolidVersion>18.1</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x86</Platform>
+  </ProductInfo>
+  <ProductInfo>
+    <ProductName>Solid Edge V20</ProductName>
+    <Version>20.0</Version>
+    <ParasolidVersion>18.1</ParasolidVersion>
+    <ProductCode></ProductCode>
+    <Platform>x64</Platform>
+  </ProductInfo>
+  <ProductInfo>
     <ProductName>Solid Edge ST</ProductName>
     <Version>100.0</Version>
     <ParasolidVersion>19.1</ParasolidVersion>
